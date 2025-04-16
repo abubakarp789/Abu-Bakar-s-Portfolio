@@ -3,24 +3,44 @@ import React from 'react';
 export default function Certifications() {
   const certifications = [
     {
+      title: "AI For Everyone",
+      issuer: "DeepLearning.AI",
+      date: "Mar '25"
+    },
+    {
+      title: "Machine Learning Fellowship",
+      issuer: "Bytewise Limited",
+      date: "Sep '24"
+    },
+    {
       title: "AI Fundamentals",
       issuer: "DataCamp",
       date: "Aug '24"
     },
     {
-      title: "Postman API Fundamentals Student Expert",
-      issuer: "Postman",
+      title: "ChatGPT Fundamentals",
+      issuer: "DataCamp",
       date: "Aug '24"
     },
     {
-      title: "Programming For Everybody (Python)",
-      issuer: "Coursera, University of Michigan",
-      date: "Jan '23"
+      title: "Postman API Fundamentals Student Expert",
+      issuer: "Canvas Credentials (Badgr)",
+      date: "Aug '24"
     },
     {
       title: "Introduction to Front-End Development",
-      issuer: "Coursera, Meta",
+      issuer: "Meta",
       date: "Aug '23"
+    },
+    {
+      title: "Prompt Engineering for ChatGPT",
+      issuer: "Vanderbilt University",
+      date: "Aug '23"
+    },
+    {
+      title: "Programming For Everybody (Python)",
+      issuer: "University of Michigan",
+      date: "Jan '23"
     }
   ];
 

@@ -8,8 +8,35 @@ export default function Skills() {
     threshold: 0.1
   });
 
-  const topSkills = ['C++', 'Python (Flask)', 'Machine Learning', 'Front-End Development (HTML,CSS)', 'Data Structures', 'Generative AI', 'SQL'];
-  const minorSkills = ['MS Office', 'Git and GitHub', 'Web Interface Design', 'Cloud Computing', 'Marketing'];
+  const topSkills = [
+    'Machine Learning',
+    'Data Preprocessing',
+    'Exploratory Data Analysis',
+    'Supervised Learning',
+    'Unsupervised Learning',
+    'Artificial Intelligence (AI)',
+    'Python',
+    'Generative AI',
+    'Large Language Models (LLM)',
+    'Prompt Engineering',
+    'API Development',
+    'Front-End Development'
+  ];
+
+  const minorSkills = [
+    'HTML5',
+    'CSS',
+    'GitHub',
+    'Microsoft Office',
+    'Postman API',
+    'ChatGPT',
+    'Data Analysis',
+    'Data Structures',
+    'Algorithms',
+    'Public Speaking',
+    'Social Media Marketing',
+    'Teaching'
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },

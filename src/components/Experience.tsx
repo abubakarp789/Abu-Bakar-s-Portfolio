@@ -3,23 +3,33 @@ import React from 'react';
 export default function Experience() {
   const experiences = [
     {
-      title: 'Machine Learning Fellow',
-      company: 'Bytewise Limited',
-      period: "June '24 - Sep '24",
+      title: 'AI/ML Fellow',
+      company: 'GDGoC FAST Peshawar Campus',
+      period: "Mar '25 - Present",
       description: [
-        'Worked on multiple machine learning projects involving data processing, model implementation.',
-        'Developed and deployed machine learning models to predict product sales based on historical data.',
-        'Participated in weekly sprints and collaborated with peers to enhance project outcomes.'
+        'Working on hands-on Machine Learning curriculum, gaining experience in building and deploying models.',
+        'Key tasks include Data Preprocessing, Exploratory Data Analysis, Supervised ML Models, Unsupervised ML Models, and Capstone Projects.',
+        'Developing an HR Attrition Predictor to identify employee turnover factors and display insights through a Streamlit app.'
       ]
     },
     {
-      title: 'Web Developer Intern',
-      company: 'CodeSoft',
+      title: 'Machine Learning Fellow',
+      company: 'Bytewise Limited',
+      period: "Jun '24 - Sep '24",
+      description: [
+        'Worked with machine learning techniques including clustering, neural networks, and predictive modeling.',
+        'Completed projects like customer churn prediction and Formula 1 race outcomes prediction.',
+        'Built web applications with Flask for model deployment and gained experience in data processing and analysis.'
+      ]
+    },
+    {
+      title: 'Web Developer',
+      company: 'Codesoft',
       period: "Oct '23",
       description: [
-        'Developed a calculator application, demonstrating my ability to create functional and user-friendly digital tools.',
-        'Designed a visually appealing and effective landing page for a gym.',
-        'Created a personal portfolio to present information in a structured and professional manner.'
+        'Developed a calculator application using HTML and CSS.',
+        'Created a landing page for a gym.',
+        'Built a personal portfolio website.'
       ]
     }
   ];

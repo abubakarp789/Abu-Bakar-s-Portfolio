@@ -6,7 +6,7 @@ export default function Education() {
       degree: "Bachelor's degree in computer science",
       institution: "Namal University Mianwali",
       period: "Oct '22 - Aug '26",
-      courses: "PF, OOP, Data Structures, Design and Analysis of Algorithms, Database"
+      courses: "PF, OOP, Data Structures, Design and Analysis of Algorithms, Databases, Operating System, Computer Networks, Software Engineering, Compiler Construction, Theory of Automata, Artificial Intelligence, Data Analysis and Visualization, Information Security, Cloud Computing"
     },
     {
       degree: "Intermediate in Pre-Engineering",

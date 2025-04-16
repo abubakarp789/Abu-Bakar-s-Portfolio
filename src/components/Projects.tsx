@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { LineChart, Database } from 'lucide-react';
+import { LineChart, Database, Twitter, Users, GraduationCap } from 'lucide-react';
 
 export default function Projects() {
   const [ref, inView] = useInView({
@@ -11,20 +11,36 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "Tweet Virality Predictor",
+      organization: "GDGoC UMT Data Analysis Bootcamp",
+      description: "A machine learning application that predicts tweet virality using Random Forest and Logistic Regression. Features include content analysis, sentiment analysis, and timing features with 85% accuracy.",
+      icon: <Twitter className="w-8 h-8 text-blue-600" />,
+      image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974",
+      link: "https://github.com/abubakarp789/Viral_or_Not-Predicting_Virality_of_Tweets"
+    },
+    {
+      title: "HR Attrition Predictor",
+      organization: "GDGoC FAST Peshawar AI/ML Fellowship",
+      description: "A Machine Learning-powered Streamlit app that predicts employee attrition with 97.96% accuracy. Features include workforce pattern visualization and actionable insights through a Decision Tree Classifier.",
+      icon: <Users className="w-8 h-8 text-blue-600" />,
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
+      link: "https://github.com/abubakarp789/HR-Attrition-Predictor"
+    },
+    {
       title: "Churn Predictor",
       organization: "Bytewise Fellowship",
-      description: "Developed a machine learning model to churn prediction using historical data of companies.",
+      description: "A Flask web application that predicts customer churn using machine learning. Features include data preprocessing, exploratory analysis, and real-time predictions with multiple model implementations.",
       icon: <LineChart className="w-8 h-8 text-blue-600" />,
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       link: "https://github.com/abubakarp789/Churn_Predictor"
     },
     {
-      title: "Predicting Product Sales",
-      organization: "Bytewise Fellowship",
-      description: "Developed a machine learning model to predict product sales using historical data.",
-      icon: <Database className="w-8 h-8 text-blue-600" />,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
-      link: "https://github.com/abubakarp789/100DaysOfBytewiseFellowship/tree/main/Bytewise%20Fellowship%20Daily%20Task%20Solution/Project%2301"
+      title: "Student Report Card Generator",
+      organization: "CodeX Computing Co. Internship",
+      description: "A comprehensive system for generating student report cards in multiple formats (Text, Word, PDF). Features include automated grade calculation and customizable report templates.",
+      icon: <GraduationCap className="w-8 h-8 text-blue-600" />,
+      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1974",
+      link: "https://github.com/abubakarp789/Python-Internship-CodeX-Computing-Co"
     }
   ];
 
