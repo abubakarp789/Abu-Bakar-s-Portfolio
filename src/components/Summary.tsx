@@ -1,87 +1,93 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Brain, Sparkles, Code, Database } from 'lucide-react';
+import { Brain, Database, LineChart, Bot } from 'lucide-react';
 
 export default function Summary() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.2
-      }
+  const skills = [
+    {
+      icon: <LineChart size={28} className="text-blue-500" />,
+      title: "Machine Learning",
+      description: "Developing ML models with 95%+ accuracy using supervised and unsupervised techniques. Expertise in classification, regression, and clustering algorithms."
+    },
+    {
+      icon: <Database size={28} className="text-blue-500" />,
+      title: "Data Science",
+      description: "Mastery in data preprocessing, exploratory analysis, and deriving actionable insights from complex datasets with visualization expertise."
+    },
+    {
+      icon: <Bot size={28} className="text-blue-500" />,
+      title: "Generative AI",
+      description: "Building applications using Large Language Models and implementing prompt engineering techniques for optimal AI performance."
+    },
+    {
+      icon: <Brain size={28} className="text-blue-500" />,
+      title: "Deep Learning",
+      description: "Creating neural network architectures for complex pattern recognition tasks and efficient model optimization."
     }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 }
-  };
+  ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <motion.div
-        ref={ref}
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        className="container mx-auto px-4"
-      >
-        <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-        
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-          <motion.div variants={itemVariants} className="text-center p-6">
-            <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-              <Brain size={32} className="text-blue-600" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Machine Learning</h3>
-            <p className="text-gray-600">Expert in predictive modeling, data analysis, and ML model deployment. Specialized in building high-accuracy models for real-world applications.</p>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="text-center p-6">
-            <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-              <Sparkles size={32} className="text-blue-600" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Generative AI</h3>
-            <p className="text-gray-600">Proficient in developing and implementing cutting-edge generative models, including LLMs and AI-powered applications.</p>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="text-center p-6">
-            <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-              <Code size={32} className="text-blue-600" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Software Development</h3>
-            <p className="text-gray-600">Experienced in full-stack development with expertise in Python, C++, and modern web technologies.</p>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="text-center p-6">
-            <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-              <Database size={32} className="text-blue-600" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Data Science</h3>
-            <p className="text-gray-600">Proficient in data preprocessing, exploratory analysis, and deriving actionable insights from complex datasets.</p>
-          </motion.div>
+    <section className="py-20 relative overflow-hidden">
+      <div className="container mx-auto px-6">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">CS Student & Machine Learning Developer</h2>
+          <p className="text-gray-600 leading-relaxed text-lg">
+            I am a Computer Science student and Machine Learning Developer with expertise in machine learning model development,
+            data analysis, and AI implementation. My portfolio showcases projects with industry-leading accuracy rates and practical applications
+            across diverse domains. 
+          </p>
         </div>
-
-        <motion.p 
-          variants={itemVariants}
-          className="text-gray-700 leading-relaxed text-lg text-center max-w-3xl mx-auto"
-        >
-          I am Abu Bakar, a BS Computer Science student and AI/ML Fellow at GDGoC FAST Peshawar, with a strong passion for 
-          artificial intelligence and software development. With expertise in machine learning, data science, and full-stack 
-          development, I have successfully completed various projects including the HR Attrition Predictor (97.96% accuracy) 
-          and Tweet Virality Predictor. My experience as a Machine Learning Fellow at Bytewise and GDGoC has honed my problem-solving skills and technical proficiency, 
-          enabling me to develop innovative solutions to complex challenges.
-        </motion.p>
-      </motion.div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {skills.map((skill, index) => (
+            <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+              <div className="bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                {skill.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">{skill.title}</h3>
+              <p className="text-gray-600 text-sm">{skill.description}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white shadow-lg">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="mb-6 md:mb-0 md:w-2/3 md:pr-8">
+              <h3 className="text-2xl font-bold mb-4">My Expertise at a Glance</h3>
+              <p className="text-blue-100">
+                As a BS Computer Science student and Machine Learning Developer, I have developed
+                high-accuracy machine learning models including the HR Attrition Predictor (97.96%),
+                Tweet Virality Predictor, and customer churn analysis tools. My experience
+                at Bytewise and GDGoC has refined my ability to build practical AI solutions
+                that deliver measurable business value.
+              </p>
+            </div>
+            <div className="md:w-1/3 flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+              <div className="space-y-4">
+                <div>
+                  <p className="text-xs text-blue-200 mb-1">Machine Learning</p>
+                  <div className="w-full bg-white/20 rounded-full h-2.5">
+                    <div className="bg-blue-300 h-2.5 rounded-full" style={{ width: '98%' }}></div>
+                  </div>
+                  <p className="text-right text-xs mt-1 text-blue-200">98%</p>
+                </div>
+                <div>
+                  <p className="text-xs text-blue-200 mb-1">Data Engineering</p>
+                  <div className="w-full bg-white/20 rounded-full h-2.5">
+                    <div className="bg-blue-300 h-2.5 rounded-full" style={{ width: '95%' }}></div>
+                  </div>
+                  <p className="text-right text-xs mt-1 text-blue-200">95%</p>
+                </div>
+                <div>
+                  <p className="text-xs text-blue-200 mb-1">Generative AI</p>
+                  <div className="w-full bg-white/20 rounded-full h-2.5">
+                    <div className="bg-blue-300 h-2.5 rounded-full" style={{ width: '90%' }}></div>
+                  </div>
+                  <p className="text-right text-xs mt-1 text-blue-200">90%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

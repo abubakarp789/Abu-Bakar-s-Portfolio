@@ -1,36 +1,87 @@
-import React from 'react';
+import { CalendarClock, MapPin } from 'lucide-react';
 
 export default function Education() {
   const education = [
     {
-      degree: "Bachelor's degree in computer science",
+      degree: "Bachelor's degree in Computer Science",
       institution: "Namal University Mianwali",
-      period: "Oct '22 - Aug '26",
-      courses: "PF, OOP, Data Structures, Design and Analysis of Algorithms, Databases, Operating System, Computer Networks, Software Engineering, Compiler Construction, Theory of Automata, Artificial Intelligence, Data Analysis and Visualization, Information Security, Cloud Computing"
+      location: "Mianwali, Pakistan",
+      period: "Oct '22 - Current",
+      courses: [
+        "Data Structures & Algorithms",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Database Systems",
+        "Operating Systems",
+        "Computer Networks",
+        "Software Engineering",
+        "Compiler Construction",
+        "Theory of Automata",
+        "Data Analysis & Visualization",
+        "Information Security",
+        "Cloud Computing"
+      ]
     },
     {
       degree: "Intermediate in Pre-Engineering",
       institution: "Shah Abdul Latif Government Degree College Mirpur Khas",
+      location: "Mirpur Khas, Pakistan",
       period: "Oct '20 - Jun '22",
-      gpa: "82%",
-      courses: "Physics, Chemistry, Mathematics"
+      percentage: "82%",
+      courses: [
+        "Physics",
+        "Chemistry",
+        "Mathematics"
+      ]
     }
   ];
 
   return (
-    <section className="py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6">Education</h2>
-        <div className="space-y-6">
+    <section className="py-20 bg-slate-50">
+      <div className="container mx-auto px-6">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="text-sm text-blue-600 font-semibold uppercase tracking-wider">Education</span>
+          <h2 className="text-3xl font-bold mt-2 mb-4 text-gray-800">Academic Background</h2>
+          <p className="text-gray-600">
+            My educational journey has given me a strong foundation in computer science
+            with specialization in data science and machine learning.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {education.map((edu, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold">{edu.degree}</h3>
-              <p className="text-blue-600">{edu.institution}</p>
-              <p className="text-gray-600">{edu.period}</p>
-              {edu.gpa && <p className="text-gray-600">GPA: {edu.gpa}</p>}
-              <p className="text-gray-700 mt-2">
-                <span className="font-medium">Relevant Courses:</span> {edu.courses}
-              </p>
+            <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden">
+              {/* Header with gradient */}
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-6 px-6 text-white">
+                <h3 className="text-xl font-bold">{edu.degree}</h3>
+                <p className="text-blue-100">{edu.institution}</p>
+              </div>
+              
+              <div className="p-6">
+                {/* Meta information */}
+                <div className="flex flex-wrap gap-4 mb-6 text-sm text-gray-500">
+                  <div className="flex items-center gap-1">
+                    <CalendarClock size={16} className="text-blue-500" />
+                    <span>{edu.period}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <MapPin size={16} className="text-blue-500" />
+                    <span>{edu.location}</span>
+                  </div>
+                </div>
+                
+                {/* Courses */}
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3">Relevant Courses:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {edu.courses.map((course, i) => (
+                      <span key={i} className="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full">
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

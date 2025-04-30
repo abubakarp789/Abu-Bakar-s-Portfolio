@@ -1,53 +1,39 @@
 # Abu Bakar's Portfolio
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, featuring animations and a clean design.
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. This portfolio showcases my professional experience, skills, projects, and certifications in the field of Machine Learning and Data Science.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: Built with React, TypeScript, and Vite
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Smooth Animations**: Powered by Framer Motion
-- **Clean UI**: Styled with Tailwind CSS
-- **Interactive Components**: Dynamic sections for projects, skills, and experience
-- **Performance Optimized**: Fast loading and smooth transitions
+- Modern and responsive design
+- Interactive UI components
+- Dark/Light mode support
+- Smooth animations and transitions
+- Downloadable CV
+- Direct contact functionality
+- Project showcase with detailed descriptions
+- Skills visualization
+- Professional certifications display
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 18
-- **Language**: TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Code Quality**: ESLint
-- **Package Manager**: npm
+- **Frontend Framework:** React 18
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Animations:** Framer Motion
+- **Build Tool:** Vite
+- **Linting:** ESLint
+- **Code Formatting:** Prettier
 
-## 📋 Project Structure
 
-```
-portfolio/
-├── src/
-│   ├── components/
-│   │   ├── Summary.tsx
-│   │   ├── Experience.tsx
-│   │   ├── Projects.tsx
-│   │   ├── Skills.tsx
-│   │   ├── Certifications.tsx
-│   │   ├── Education.tsx
-│   │   └── Header.tsx
-│   ├── App.tsx
-│   └── main.tsx
-├── public/
-├── package.json
-└── README.md
-```
 
 ## 🚀 Getting Started
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/abubakarp789/Abu-Bakar-s-Portfolio.git
-   cd Abu-Bakar-s-Portfolio
+   git clone https://github.com/abubakarp789/portfolio.git
+   
+   cd portfolio
    ```
 
 2. **Install dependencies**
@@ -65,42 +51,45 @@ portfolio/
    npm run build
    ```
 
-## 🎯 Key Features
+## 📝 Available Scripts
 
-- **About Me Section**: Professional introduction with animated skill cards
-- **Experience Timeline**: Detailed work history and achievements
-- **Project Showcase**: Featured projects with descriptions and links
-- **Skills Overview**: Visual representation of technical skills
-- **Certifications**: Display of professional certifications
-- **Responsive Design**: Mobile-first approach for all screen sizes
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-## 🌟 Featured Projects
+## 🎨 Customization
 
-1. **Tweet Virality Predictor**
-   - Machine learning application with 85% accuracy
-   - Built during GDGoC UMT Data Analysis Bootcamp
+1. **Update Personal Information**
+   - Modify content in respective component files
+   - Update CV in `public/` directory
+   - Update contact information in `Header.tsx`
 
-2. **HR Attrition Predictor**
-   - Streamlit app with 97.96% accuracy
-   - Part of GDGoC FAST Peshawar AI/ML Fellowship
+2. **Styling**
+   - Customize colors in `tailwind.config.js`
+   - Modify component styles in respective `.tsx` files
 
-3. **Churn Predictor**
-   - Flask web application for customer churn prediction
-   - Developed during Bytewise Fellowship
+## 📱 Responsive Design
 
-4. **Student Report Card Generator**
-   - Multi-format report generation system
-   - Created during CodeX Computing Co. Internship
+The portfolio is fully responsive and works on:
+- Mobile devices
+- Tablets
+- Desktop computers
+- Large screens
 
-## 👨‍💻 About Me
+## 🔗 Links
 
-I am a BS Computer Science student and AI/ML Fellow at GDGoC FAST Peshawar, specializing in:
-- Machine Learning & AI
-- Data Science
-- Full-Stack Development
-- Software Engineering
+- **Email:** abubakarp789@gmail.com
+- **LinkedIn:** [linkedin.com/in/abubakar56](https://linkedin.com/in/abubakar56)
+- **GitHub:** [github.com/abubakarp789](https://github.com/abubakarp789)
 
-## 📬 Contact
+## 📄 License
 
-- Email: abubakarp789@gmail.com
-- GitHub: [Abu Bakar](https://github.com/abubakarp789)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Vite](https://vitejs.dev/) for the build tool
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Lucide React](https://lucide.dev/) for icons
+- [Framer Motion](https://www.framer.com/motion/) for animations
